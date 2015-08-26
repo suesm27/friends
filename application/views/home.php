@@ -65,7 +65,7 @@
           echo "<tr>";
           echo "<td><a href='/users/view_profile/{$p['id']}'>{$p['alias']}</a></td>";
           echo "<td>";
-          echo "<a href='/main/add_friend/{$this->session->userdata('current_user_id')}/{$p['id']}'>Add as Friend</a>";
+          echo "<a href='/main/add_friend/{$this->session->userdata('current_user_id')}/{$p['id']}'><button type='button'>Add as Friend</button></a>";
           echo "</td>";
           echo "</tr>";
         }
