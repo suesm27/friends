@@ -33,6 +33,12 @@
   <div class="main-container">
     <div class="container">
       <h1>Hello <?php echo $this->session->userdata('name'); ?></h1>
+      <?php 
+      if($friends == null){
+        echo "<h3>You don't have friends yet.</h3>";
+      }
+      else{
+       ?>
       <h3>Here is the list of your friends:</h3>
         <table class='table table-striped'>
           <thead>
@@ -53,7 +59,8 @@
       ?>
       </tbody>
     </table>
-    <h3>Other Users not ion your friend's list:</h3>
+    <?php } ?>
+    <h3>Other Users not in your friend's list:</h3>
         <table class='table table-striped'>
           <thead>
             <th>Alias</th>
